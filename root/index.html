@@ -1,3 +1,24 @@
 <html>
     <div>hellow</div>
 </html>
+
+<script>
+    document.onload = () => {
+        console.log('onload')
+        function pushHistory() {
+            var state = {
+                title: "title",
+                url: "#"
+            };
+            window.history.pushState(state, "title", "#");
+        }
+        pushHistory();
+		
+		//延时监听防止页面刷新时被触发
+        setTimeout(function () {
+            window.addEventListener("popstate", function(e) {
+				//TODO 监听成功
+            }, false);
+        },1000);
+    }
+</script>
