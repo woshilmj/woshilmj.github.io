@@ -1,5 +1,7 @@
 <html>
     <div>hellow</div>
+    <button style="width: 100px;height: 30px;line-height: 30px;">点击</button>
+    <div id="box"></div>
 </html>
 
 <script>
@@ -18,6 +20,7 @@
         setTimeout(function () {
             window.addEventListener("popstate", function(e) {
 				//TODO 监听成功
+                document.getElementById('box').innerHTML = '返回了一下'
                 console.log(123)
             }, false);
         },1000);
